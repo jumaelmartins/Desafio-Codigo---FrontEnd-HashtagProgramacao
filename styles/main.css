@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+:root {
+  --bg-dark-gray: #10151b;
+  --bg-gray: #181e25;
+  --bg-light-gray: #2b323c;
+  --bg-light-blue: #00b1d3;
+  --bg-dark-blue: #005982;
+  --font-blue: #00a8dd;
+  --font-gray: #a5a5a5;
+  --font-white: #fff;
+  --btn-border-blue: #004e69;
+  --btn-border-black: #000;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  font-family: sora;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3.98rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+h3 {
+  font-size: 1.92rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+p,
+li,
+a,
+button {
+  font-size: 1.6rem;
+}
+b {
+  font-size: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--bg-gray);
+  color: var(--font-white);
+}
+.emphasis {
+  color: var(--font-blue);
+}
+
+.container {
+  width: 100rem;
+  margin: auto;
+}
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6rem;
+}
+
+.main-first-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-first-column > header > img {
+  width: 32px;
+  background: var(--font-white);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+.main-first-column > header > h1 {
+  margin: 2rem 0 0.5rem 0;
+}
+
+.main-first-column > p {
+  font-size: 2.3rem;
+  margin: 2rem 0 0 0;
+  width: 95%;
+  & b {
+    font-size: 2.3rem;
+  }
+}
+
+.main-first-column > ul {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+  width: 95%;
+  gap: 0.5rem;
+  & li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-transform: uppercase;
+    max-width: 33.3%;
+  }
+  & li > img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  & li > p,
+  b {
+    font-size: 1.33rem;
+  }
+}
+
+.btn {
+  color: var(--font-white);
+  padding: 0.5rem 1rem;
+  position: relative;
+  border-radius: 0.8rem;
+  width: fit-content;
+  width: -moz-fit-content;
+  transition: all 0.1s;
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.btn--primary {
+  background: var(--font-blue);
+  box-shadow: 0.2rem 0.2rem 0 0.1rem var(--btn-border-blue);
+}
+
+.btn--secondary {
+  background: var(--bg-gray);
+  box-shadow: 0.2rem 0.2rem 0 0.1rem var(--btn-border-black);
+}
+
+.main-second-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  & ul {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.card {
+  background: var(--bg-light-gray);
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  height: 23rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  & img {
+    width: 24px;
+    height: 24px;
+  }
+  & > h3 {
+    margin: 1rem 0 0 0;
+  }
+  & > p {
+    font-size: 1.3rem;
+  }
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 0 0;
+    gap: 0.5rem;
+  }
+
+  & > ul > li {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  & > ul > li > p {
+    font-size: 1.33rem;
+    line-height: 1.5rem;
+    margin-left: 2.5rem;
+  }
+
+  & > ul > li::before {
+    content: "";
+    position: absolute;
+    background: no-repeat
+      url("https://cdn.prod.website-files.com/61b9e0dd381626819c8d4f83/62cef75c0262284af718645d_checked.webp");
+    background-position: center;
+    background-size: cover;
+    height: 1.6rem;
+    width: 1.6rem;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.warning {
+  margin-top: 4rem;
+  background: var(--bg-dark-gray);
+  width: 100%;
+  display: flex;
+  padding: 2.5rem 0;
+  & > p {
+    font-size: 1.33rem;
+    text-align: center;
+    color: var(--font-gray);
+    width: 56%;
+  }
+}
+
+.session-two {
+  text-align: center;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "steps steps"
+    "about-teacher about-course";
+  gap: 6rem;
+
+  & > .title {
+    font-size: 3.98rem;
+    width: 80%;
+    margin: auto;
+    font-weight: 400;
+    grid-area: title;
+  }
+}
+
+.step-by-step {
+  grid-area: steps;
+  display: flex;
+  background: var(--bg-light-gray);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 28rem;
+  & > p {
+    font-size: 1.6rem;
+  }
+  & > :nth-child(2) {
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+}
+
+.about-teacher {
+  max-width: 50rem;
+  grid-area: about-teacher;
+  display: flex;
+  background: var(--bg-light-gray);
+  border-radius: 1rem;
+  flex-direction: column;
+  padding: 4rem 0;
+  & > h4 {
+    font-size: 1.92rem;
+  }
+  & > div {
+    margin-top: 3rem;
+    background: linear-gradient(
+      to bottom right,
+      var(--bg-gray),
+      var(--bg-dark-gray)
+    );
+    display: flex;
+    padding: 2rem 4rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  & > :nth-child(2) > div > p {
+    text-align: start;
+    font-size: 1.92rem;
+  }
+
+  & > p {
+    margin-top: 1.5rem;
+    padding: 0 4rem;
+    align-self: center;
+    font-size: 1.92rem;
+  }
+}
+
+.about-course {
+  text-align: start;
+  grid-area: about-course;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  padding: 4rem 0;
+  gap: 4rem;
+  & > :nth-child(1) {
+    background: var(--bg-light-gray);
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & > :nth-child(1) > div {
+    display: flex;
+    align-items: center;
+  }
+  & > :nth-child(1) > div > img {
+    width: 32px;
+    height: 32px;
+  }
+
+  & > :nth-child(2) {
+    border-radius: 1rem;
+    background: linear-gradient(
+      to bottom right,
+      var(--bg-dark-blue),
+      var(--bg-light-blue)
+    );
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+  }
+  & > :nth-child(2) > p {
+    width: 15rem;
+    font-size: 1.92rem;
+  }
+}
+
+footer {
+  background: var(--bg-light-gray);
+  width: 100%;
+  display: flex;
+  margin-top: 4rem;
+  padding: 6rem 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+footer > img {
+  width: 32px;
+}
+footer > span,
+footer > span > a {
+  font-size: 1.33rem;
+}
+footer > span > a {
+  color: white;
+}
+
+footer > span > a:visited {
+  color: white;
+}
+
+footer > span > a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > .main-first-column {
+      align-items: center;
+      justify-content: center;
+
+      & > header {
+        display: flex;
+        flex-direction: column;
+      }
+
+      & > header > img {
+        align-self: center;
+      }
+    }
+    & > .main-first-column > p {
+      text-align: center;
+    }
+
+    & > .main-second-column {
+      width: 600px;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      margin-top: 6rem;
+    }
+    & > .main-second-column > ul {
+      justify-content: center;
+    }
+  }
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    min-width: 480px;
+  }
+
+  .session-two {
+    grid-template-areas:
+      "title title"
+      "steps steps"
+      "about-teacher about-teacher"
+      "about-course about-course";
+  }
+
+  .about-teacher,
+  .about-course {
+    justify-self: center;
+  }
+  .step {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .step-by-step {
+    flex-direction: column;
+    margin: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .main-content {
+    & > .main-first-column > ul {
+      justify-content: center;
+      margin: 2rem 0 2rem 2rem;
+    }
+    & > .main-first-column > ul > li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .about-teacher,
+  .about-course {
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    & > .main-second-column > ul {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card {
+      width: 32rem;
+    }
+    & > .main-first-column > header {
+      text-align: center;
+    }
+  }
+  .container {
+    min-width: 28px;
+  }
+  footer {
+    flex-direction: column;
+  }
+
+}
